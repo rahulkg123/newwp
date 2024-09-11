@@ -6,7 +6,7 @@
         <?php if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : the_post(); ?>
 
-                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <article id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
                     <header class="entry-header">
                         <h1 class="entry-title"><?php the_title(); ?></h1>
                     </header><!-- .entry-header -->
@@ -14,14 +14,9 @@
                     <div class="entry-content">
                         <?php the_content(); ?>
                     </div><!-- .entry-content -->
+                </article><!-- #page-## -->
 
-                    <footer class="entry-footer">
-                        <?php the_category(); ?>
-                        <?php the_tags(); ?>
-                    </footer><!-- .entry-footer -->
-                </article><!-- #post-## -->
-
-                <!-- Comments Section -->
+                <!-- Comments for Pages (optional) -->
                 <?php if ( comments_open() || get_comments_number() ) : ?>
                     <?php comments_template(); ?>
                 <?php endif; ?>
