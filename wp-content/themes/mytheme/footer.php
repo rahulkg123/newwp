@@ -1,3 +1,4 @@
+</div>
 <footer id="site-footer" role="contentinfo">
     <div class="container">
         <!-- Footer Widgets -->
