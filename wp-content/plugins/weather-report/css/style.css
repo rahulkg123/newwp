@@ -1,0 +1,27 @@
+.weather-report {
+    margin: 20px auto;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.weather-report h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.weather-report .card-body {
+    padding: 20px;
+}
+
+.weather-report .card-text {
+    font-size: 16px;
+}
+
+.weather-report .card-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.weather-report p {
+    margin: 10px 0;
+}

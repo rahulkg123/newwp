@@ -85,3 +85,11 @@ body {
   .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
   }  
+  .custom-logo {
+    max-width: 100%; /* Ensures the logo is responsive */
+    height: auto; /* Adjusts the height automatically */
+}
+
+.custom-logo-link {
+    display: inline-block; /* Ensures the logo is displayed inline */
+}

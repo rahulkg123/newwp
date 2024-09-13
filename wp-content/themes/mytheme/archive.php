@@ -35,3 +35,18 @@
             <?php endwhile; ?>
 
             <!-- Pagination -->
+            <div class="pagination">
+                <?php the_posts_pagination(); ?>
+            </div>
+
+        <?php else : ?>
+
+            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+
+        <?php endif; ?>
+
+    </main><!-- .site-main -->
+</div><!-- .content-area -->
+
+<?php get_sidebar(); ?> <!-- Includes sidebar.php (if available) -->
+<?php get_footer(); ?> <!-- Includes footer.php -->
