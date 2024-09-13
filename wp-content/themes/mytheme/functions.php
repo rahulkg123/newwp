@@ -110,5 +110,24 @@ function add_custom_classes_to_menu_items($classes, $item, $args, $depth) {
     return $classes;
 }
 add_filter('nav_menu_css_class', 'add_custom_classes_to_menu_items'); */
+// Add Shortcode
+function subform() {
+    //print_r(wp_get_current_user());
+    // Get the current user's display name
+    $user_display_name = !empty(wp_get_current_user()->user_firstname)?wp_get_current_user()->user_firstname:wp_get_current_user()->display_name;
 
+    // Get the blog name
+    $blog_name = get_bloginfo( 'name' );
+
+    // Display the welcome message and subscription form
+    echo '<p>Hey ' . $user_display_name . ', welcome to ' . $blog_name . '! You can subscribe to our newsletter here:</p>';
+    ?>
+    <form action="/thank-you">
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email">
+        <input type="submit" value="Submit">
+    </form>
+    <?php
+}
+add_shortcode( 'subscriptionform', 'subform' );
 
